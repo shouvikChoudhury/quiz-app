@@ -1,9 +1,18 @@
 import { CircularProgress } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import Question from "../../components/Question/Question";
+import { useHistory } from "react-router-dom";
 import "./Quiz.css";
 
 const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
+  const history = useHistory();
+
+  useEffect(() => {
+    if (!name) {
+      history.push("/");
+    }
+  }, [name, history]);
+
   const [options, setOptions] = useState();
   const [currQues, setCurrQues] = useState(0);
 
