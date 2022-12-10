@@ -20,9 +20,8 @@ const Question = ({
   const history = useHistory();
 
   const handleSelect = (i) => {
-    if (selected === i && selected === correct) return "select";
+    if (i === correct) return "select";
     else if (selected === i && selected !== correct) return "wrong";
-    else if (i === correct) return "select";
   };
 
   const handleCheck = (i) => {
@@ -46,6 +45,7 @@ const Question = ({
   const handleQuit = () => {
     setCurrQues(0);
     setQuestions();
+    setScore(0)
     history.push("/");
   };
 

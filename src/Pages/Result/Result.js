@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "./Result.css";
 
-const Result = ({ name, score }) => {
+const Result = ({ name, score, setScore }) => {
   const history = useHistory();
 
   useEffect(() => {
@@ -12,6 +12,10 @@ const Result = ({ name, score }) => {
     }
   }, [name, history]);
 
+  const handleReturn = () => {
+    setScore(0)
+    history.push("/");
+  }
   return (
     <div className="result">
       <span className="title">Congratulations {name} <br /><br /> Final Score : {score}</span>
@@ -20,7 +24,7 @@ const Result = ({ name, score }) => {
         color="secondary"
         size="large"
         style={{ alignSelf: "center", marginTop: 20 }}
-        onClick={() => { history.push("/") }}
+        onClick={() => handleReturn()}
       >
         Go to homepage
       </Button>

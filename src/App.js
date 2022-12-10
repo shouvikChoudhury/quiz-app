@@ -44,7 +44,7 @@ function App() {
             />
           </Route>
           <Route path="/result">
-            <Result name={name} score={score} />
+            <Result name={name} score={score} setScore={setScore} />
           </Route>
         </Switch>
       </div>
