@@ -14,7 +14,7 @@ const Result = ({ name, score }) => {
 
   return (
     <div className="result">
-      <span className="title">Congratulations {name} <br/><br/> Final Score : {score}</span>
+      <span className="title">Congratulations {name} <br /><br /> Final Score : {score}</span>
       <Button
         variant="contained"
         color="secondary"

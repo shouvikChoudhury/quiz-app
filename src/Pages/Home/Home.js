@@ -28,7 +28,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
       <div className="settings">
         <span style={{ fontSize: 30 }}>Enter details to Start</span>
         <div className="settings__select">
-          {error && <ErrorMessage>Please Fill all the feilds</ErrorMessage>}
+          {error && <ErrorMessage>Fields cannot be empty</ErrorMessage>}
           <TextField
             style={{ marginBottom: 25 }}
             label="Enter Your Name"

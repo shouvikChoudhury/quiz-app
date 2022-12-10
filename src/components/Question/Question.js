@@ -34,13 +34,13 @@ const Question = ({
   const handleNext = () => {
     if (currQues > 8) {
       if (selected) history.push("/result");
-      else setError("Please select an option first");
+      else setError(true);
     }
     else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();
     }
-    else setError("Please select an option first");
+    else setError(true);
   };
 
   const handleQuit = () => {
@@ -56,7 +56,7 @@ const Question = ({
       <div className="singleQuestion">
         <h2>{questions[currQues].question}</h2>
         <div className="options">
-          {error && <ErrorMessage>{error}</ErrorMessage>}
+          {error && <ErrorMessage>Please select an option first</ErrorMessage>}
           {options &&
             options.map((i) => (
               <button
