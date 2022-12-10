@@ -33,11 +33,14 @@ const Question = ({
 
   const handleNext = () => {
     if (currQues > 8) {
-      history.push("/result");
-    } else if (selected) {
+      if (selected) history.push("/result");
+      else setError("Please select an option first");
+    }
+    else if (selected) {
       setCurrQues(currQues + 1);
       setSelected();
-    } else setError("Please select an option first");
+    }
+    else setError("Please select an option first");
   };
 
   const handleQuit = () => {
