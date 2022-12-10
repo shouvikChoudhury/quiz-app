@@ -13,7 +13,7 @@ const Quiz = ({ name, questions, score, setScore, setQuestions }) => {
     }
   }, [name, history]);
 
-  const [options, setOptions] = useState();
+  const [options, setOptions] = useState([]);
   const [currQues, setCurrQues] = useState(0);
 
   useEffect(() => {

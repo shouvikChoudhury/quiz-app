@@ -10,7 +10,7 @@ import Result from "./Pages/Result/Result";
 
 function App() {
   const [questions, setQuestions] = useState();
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
   const [score, setScore] = useState(0);
 
   const fetchQuestions = async (category = "", difficulty = "") => {
