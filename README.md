@@ -1,4 +1,4 @@
-Hoisted app link is https://simplequiz-a3998.web.app
+Hoisted link is https://simplequiz-a3998.web.app
 
 This a fully responsive website build using React JS and Material UI.
 
