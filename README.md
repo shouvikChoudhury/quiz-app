@@ -1,7 +1,7 @@
 # simplequiz
 Hoisted URL is https://simplequiz-a3998.web.app
 
-The is fully responsive website and built using react.js and material UI
+The is fully responsive website and built using react.js and material UI.
 
 It has three pages Home, Quiz and Result.
 
@@ -11,4 +11,4 @@ Quiz : Here user can see a question and select an answer at a time. They can mov
 
 Result : User can see their final score and compare their answer with correct answer for all 15 questions serial wise. Also user can bo go to back to home.
 
-CODE SETUP : Clone this git repo and run npm install
+CODE SETUP : Clone this git repo and run npm install. Then run npm start.
