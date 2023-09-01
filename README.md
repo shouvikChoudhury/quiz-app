@@ -1,7 +1,7 @@
 # simplequiz
 Hoisted URL is https://simplequiz-a3998.web.app
 
-The is fully responsive websitw and built using react.js and material UI
+The is fully responsive website and built using react.js and material UI
 
 It has three pages Home, Quiz and Result.
 
