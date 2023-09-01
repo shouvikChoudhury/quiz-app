@@ -30,7 +30,7 @@ const Home = ({ name, setName, fetchQuestions, setQuestions }) => {
         <div className="settings">
           <span style={{ fontSize: 30 }}>Enter Email to Start</span>
           <div className="settings__select">
-            {error && <ErrorMessage>Fields cannot be empty</ErrorMessage>}
+            {error && <ErrorMessage>Field cannot be empty</ErrorMessage>}
             <TextField
               type="email"
               style={{ marginBottom: 25 }}
@@ -38,6 +38,8 @@ const Home = ({ name, setName, fetchQuestions, setQuestions }) => {
               variant="outlined"
               onChange={(e) => setName(e.target.value)}
             />
+
+            <b>This is a 30 mins Quiz. Once the time ends, it will auto submit.</b>
             <Button
               endIcon={<ArrowForwardIosIcon />}
               variant="contained"

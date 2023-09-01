@@ -13,7 +13,7 @@ const CountDownTimer = () => {
                 setTime(time - 1);
             } else {
                 clearInterval(timerInterval);
-                alert("Time Ends, Quiz got Submitted")
+
                 history.push("/result")
             }
         }, 1000);

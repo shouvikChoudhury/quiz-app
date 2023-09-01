@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import "./Quiz.css";
 import CountDownTimer from "../../components/CountDownTimer";
 
-const Quiz = ({ name, questions, setQuestions, objQuest, setobjQuest }) => {
+const Quiz = ({ name, questions, setQuestions, objQuest, setobjQuest, setName }) => {
   const history = useHistory();
 
   useEffect(() => {
@@ -39,7 +39,6 @@ const Quiz = ({ name, questions, setQuestions, objQuest, setobjQuest }) => {
         <>
           <div className="quizInfo">
             <span><b><CountDownTimer /></b></span>
-
           </div>
           <Question
             currQues={currQues}
@@ -50,6 +49,7 @@ const Quiz = ({ name, questions, setQuestions, objQuest, setobjQuest }) => {
             setQuestions={setQuestions}
             objQuest={objQuest}
             setobjQuest={setobjQuest}
+            setName={setName}
           />
         </>
       ) : (

@@ -18,11 +18,11 @@ const Result = ({ name, setName, objQuest, setobjQuest, questions }) => {
     }
     else {
       let arr1 = [...new Map(objQuest?.map((item) => [item.id, item]))].map(i => i[1])
-      setscore(arr1.filter(item => item.answer == item.correctans).length)
+      setscore(arr1.filter(item => item.answer === item.correctans).length)
 
-      let arr2 = questions?.filter((item) => objQuest.map(i => i.questcurr).includes(item.question) == false).map(i => {
+      let arr2 = questions?.filter((item) => objQuest.map(i => i.questcurr).includes(item.question) === false).map(i => {
         return {
-          id: questions.findIndex(x => x.question == i.question),
+          id: questions.findIndex(x => x.question === i.question),
           answer: "",
           questcurr: i.question,
           correctans: i.correct_answer
@@ -41,18 +41,9 @@ const Result = ({ name, setName, objQuest, setobjQuest, questions }) => {
 
   return (
     <div className="result">
-      <Button
-        endIcon={<ArrowBackIosNewIcon />}
-        variant="contained"
-        size="large"
-        style={{ alignSelf: "center", margin: "15px" }}
-        onClick={() => handleReturn()}
-      >
-        Go to Home
-      </Button>
       <span style={{ alignSelf: "center", marginBottom: "20px" }} className="subtitle">{name}, Final Score : {score}</span>
 
-      <div style={{ border: " 5px solid #9c27b0", marginBottom: "15px" }}>
+      <div style={{ border: " 5px solid #9c27b0" }}>
         {resArr?.map((item) => {
           return (<div style={{ margin: "10px" }}>
             <p><b>Q-{item.id + 1}. {item.questcurr}</b></p>
@@ -62,6 +53,15 @@ const Result = ({ name, setName, objQuest, setobjQuest, questions }) => {
         })
         }
       </div>
+      <Button
+        endIcon={<ArrowBackIosNewIcon />}
+        variant="contained"
+        size="large"
+        style={{ alignSelf: "center", margin: "15px" }}
+        onClick={() => handleReturn()}
+      >
+        Go to Home
+      </Button>
     </div>
   );
 };

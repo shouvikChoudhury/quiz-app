@@ -15,7 +15,8 @@ const Question = ({
   correct,
   setQuestions,
   objQuest,
-  setobjQuest
+  setobjQuest,
+  setName
 }) => {
   const [selected, setSelected] = useState();
   const [error, setError] = useState(false);
@@ -57,6 +58,8 @@ const Question = ({
     setCurrQues(0);
     setQuestions();
 
+    setobjQuest([])
+    setName("")
     history.push("/");
   };
 
@@ -72,7 +75,7 @@ const Question = ({
           {options &&
             options.map((i) => (
               <button
-                className={`singleOption `}
+                className="singleOption"
                 key={i}
                 onClick={() => handleCheck(i, currQues)}
                 disabled={selected}

@@ -33,6 +33,7 @@ function App() {
               setQuestions={setQuestions}
               objQuest={objQuest}
               setobjQuest={setobjQuest}
+              setName={setName}
             />
           </Route>
           <Route path="/result">
