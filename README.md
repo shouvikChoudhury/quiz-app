@@ -1,6 +1,6 @@
 Hoisted link is https://simplequiz-a3998.web.app
 
-This a fully responsive website build using React JS and Material UI.
+This a fully responsive website build using ReactJS and Material UI.
 
 It has three screens Home, Quiz and Result.
 
