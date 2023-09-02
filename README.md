@@ -2,7 +2,7 @@ Hoisted link is https://simplequiz-a3998.web.app
 
 This a fully responsive website build using React JS and Material UI.
 
-It has three pages Home, Quiz and Result.
+It has three screens Home, Quiz and Result.
 
 Home : User need to enter email to start the quiz of time limit 30 mins.
 
