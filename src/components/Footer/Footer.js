@@ -5,7 +5,7 @@ const Footer = () => {
         textAlign: "center"
       }}
     >
-      ~ Josh Talks Frontend Engineer Assignment by SHOUVIK CHOUDHURY ~
+      ~ All the Best ~
     </div>
   );
 };
